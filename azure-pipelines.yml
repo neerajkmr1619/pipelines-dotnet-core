@@ -47,3 +47,13 @@ steps:
   inputs:
    artifactName: 'AzureDemoPipeline' 
 
+# Deploy a web Deploy   
+
+- task: AzureWebApp@1
+  displayName: Azure Web App Deploy
+  inputs:
+   appType: webApp
+   azureSubscription: 'pipelinedemo'
+   appName: 'pipelinedemo1'
+   package: $(Build.ArtifactStagingDirectory)/*.zip
+
