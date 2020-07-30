@@ -40,7 +40,7 @@ steps:
    command: publish
    publishWebProjects: false
    projects: '**/*.csproj'
-   arguments: '--configuration $(buildConfiguration) --output &(Build.ArtifactStagingDirectory)'
+   arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Public Artifact: drop'
