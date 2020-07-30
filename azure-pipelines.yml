@@ -13,8 +13,7 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+# Download nuGet packages
 - task: DotNetCoreCLI@2
   displayName: 'dotnet restore'
   inputs:
